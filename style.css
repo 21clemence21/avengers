@@ -2,30 +2,167 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color:#010101;
 }
 
-header #banner {
+header  {
     background-image: url("images/banner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 150px;
+    height: 175px;
     display: flex;
     flex-direction: row;
     align-items:center;
     justify-content: flex-start;
+ 
     
  
 }
 
 header img {
     width: 150px; 
-    padding-left:35px;   
+    padding-left:35px;  
+    position: fixed; 
+    top: 25px;
+    z-index: 4;
 }
 
 header nav ul {
     display: flex;
     flex-direction: row;
     align-content: space-around;
-    justify-content: center
+    justify-content: space-around;
+    list-style-type: none;
+    height: 100px;
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+   
 }
+
+header nav ul li {
+    padding: 30px 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+
+header nav ul li a {
+    text-decoration : none;
+    color:#FBFBFF;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color:#1D2835;
+    border: 1px solid #FBFBFF;
+    color:lightgrey;
+    margin-bottom: 40px;
+}
+
+header nav ul li lienMovie {
+    padding-left: 20px;
+}
+
+
+header nav ul li a:hover {
+    background-color:#CEDADF;
+    color:#1D2835;
+    border: 2px solid #1D2835;
+    
+}
+
+#movie {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-around;
+    height: 500px;
+    border: solid white 2px;
+}
+
+iframe {
+    margin-left:200px;
+    margin-right:50px;
+  
+}
+
+#descriptionMovie {
+    color: #28C4C3; 
+    padding: 20px 40px;
+    background-color:rgba(0, 18, 18,0.7);
+    margin-right: 200px;
+    margin-left: 50px;
+    border-radius: 10px;
+    border: 1px solid rgb(93, 156, 154);
+    box-shadow: 3px 2px 1px #28C4C3;
+    width: 80%;
+
+}
+
+
+
+
+#casttitle h1 {
+    color: white;
+    font-weight: bold; 
+    text-align: center; 
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+}
+
+
+#cast {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-around; 
+    
+}
+
+#cast div{
+    width: 28%;
+    color: white;
+    margin: 25px;
+
+}
+
+
+.image{
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+.image img {
+  width: 100%;
+}
+
+  .texthover{
+    opacity: 0;
+    position: absolute;
+    z-index: 3;
+    font-size: 1.2rem;
+    height: 40%;
+    width: 80%;
+    line-height:1.2;
+    text-align: justify;
+    -moz-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    top:200px;
+    background-color:rgba(13, 4, 25,0.6);
+    color:white;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .image:hover .texthover{
+    opacity:1;
+  }
+  
+
